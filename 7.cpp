@@ -25,12 +25,39 @@ int reverseNumber(int n)
     return reversedNumber;
 }
 
+bool isPrime(int n)
+{
+    if (n <= 1)
+        return false;
+    if (n == 2)
+        return true;
+
+    if (n % 2 == 0)
+        return false;
+    for (int i = 3; i * i <= n; i += 2)
+    {
+        if (n % 2 == 0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+
 int main()
 {
     int n;
     cout << "Enter a number: ";
     cin >> n;
     // int result = countDigit(n);
-    int result = reverseNumber(n);
-    cout << "The reversed number" << n << " is: " << result << endl;
+    // int result = reverseNumber(n);
+    int result = isPrime(n);
+    if (result == true)
+    {
+        cout << "The given number " << n << " is " << "prime" << endl;
+    }
+    else
+    {
+        cout << "The given number " << n << " is not" << "prime" << endl;
+    }
 }
