@@ -1,16 +1,28 @@
 #include <iostream>
 using namespace std;
 
-int countDigit(int n)
+// int countDigit(int n)
+// {
+//     int count = 0;
+//     while (n != 0)
+//     {
+//         count++;
+//         n = n / 10;
+//     }
+
+//     return count;
+// }
+
+int reverseNumber(int n)
 {
-    int count = 0;
+    int reversedNumber = 0;
     while (n != 0)
     {
-        count++;
+        int digit = n % 10;
+        reversedNumber = reversedNumber * 10 + digit;
         n = n / 10;
     }
-
-    return count;
+    return reversedNumber;
 }
 
 int main()
@@ -18,6 +30,7 @@ int main()
     int n;
     cout << "Enter a number: ";
     cin >> n;
-    int result = countDigit(n);
-    cout << "Numbers of digits in " << n << " is: " << result << endl;
+    // int result = countDigit(n);
+    int result = reverseNumber(n);
+    cout << "The reversed number" << n << " is: " << result << endl;
 }
