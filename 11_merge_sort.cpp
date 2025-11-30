@@ -11,7 +11,6 @@ void merge(int arr[], int s, int e)
     int *first = new int[len1];
     int *second = new int[len2];
 
-
     int k = s;
 
     for (int i = 0; i < len1; i++)
@@ -29,7 +28,6 @@ void merge(int arr[], int s, int e)
 
     int index1 = 0;
     int index2 = 0;
-    // main array index k
     k = s;
 
     while (index1 < len1 && index2 < len2)
